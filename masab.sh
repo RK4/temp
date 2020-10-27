@@ -1,3 +1,4 @@
+wget "https://www.dropbox.com/s/7w7zp43tqvszyht/graphs.zip?dl=0" -O graphs.zip
 unzip graphs.zip
 cd graphs
 g++ -c distance.cpp.gz
