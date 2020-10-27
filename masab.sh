@@ -1,12 +1,14 @@
 wget "https://www.dropbox.com/s/7w7zp43tqvszyht/graphs.zip?dl=0" -O graphs.zip
 unzip graphs.zip
 cd graphs
-g++ -c distance.cpp.gz
-g++ -c max.cpp.gz
-g++ -c ai.cpp.gz
-g++ -c rp.cpp.gz
-g++ -c ci.cpp.gz
-g++ -c cage14.cpp.gz
+gzip -d distance.cpp.gz
+gzip -d max.cpp.gz
+gzip -d ai.cpp.gz
+gzip -d rp.cpp.gz
+gzip -d ci.cpp.gz
+gzip -d cage14.cpp.gz
+
+echo "Compiling graphs"
 
 cd ..
 g++ -c ./graphs/distance.cpp
@@ -19,6 +21,8 @@ g++ -c ./graphs/cage14.cpp
 mkdir USA cage14
 mv distance.o max.o ai.o ci.o rp.o ./USA
 mv cage14.o ./cage14 
+
+echo "Compiling apps"
 
 g++ -c sssp_seq.cpp -std=c++11
 g++ -c sssp_seq.cpp -std=c++11; g++ sssp_seq.o ./USA/* -o sssp_seq_usa
@@ -44,6 +48,8 @@ g++ -c bfs_seq.cpp -std=c++11; g++ bfs_seq.o ./cage14/* -o bfs_seq_cage
 
 g++ -c bfs_software_msg.cpp -std=c++11
 g++ -c bfs_software_msg.cpp -std=c++11; g++ bfs_software_msg.o ./cage14/* bfs_cage
+
+echo "Running"
 
 echo "SSSP USA" >> results
 ./sssp_seq_usa >> results
