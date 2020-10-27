@@ -25,29 +25,29 @@ mv cage14.o ./cage14
 echo "Compiling apps"
 
 g++ -c sssp_seq.cpp -std=c++11
-g++ -c sssp_seq.cpp -std=c++11; g++ sssp_seq.o ./USA/* -o sssp_seq_usa
+g++ -c sssp_seq.cpp -std=c++11; g++ sssp_seq.o ./USA/* -o sssp_seq_usa -lpthread
 
 g++ -c sssp_software_msg.cpp -std=c++11 
-g++ -c sssp_software_msg.cpp -std=c++11; g++ sssp_software_msg.o ./USA/* -o sssp_usa
+g++ -c sssp_software_msg.cpp -std=c++11; g++ sssp_software_msg.o ./USA/* -o sssp_usa -lpthread
 
 g++ -c sssp_seq.cpp -std=c++11 
-g++ -c sssp_seq.cpp -std=c++11; g++ sssp_seq.o ./USA/* -o sssp_seq_cage
+g++ -c sssp_seq.cpp -std=c++11; g++ sssp_seq.o ./USA/* -o sssp_seq_cage -lpthread
 
 g++ -c sssp_software_msg.cpp -std=c++11
-g++ -c sssp_software_msg.cpp -std=c++11; g++ sssp_software_msg.o ./USA/* sssp_cage
+g++ -c sssp_software_msg.cpp -std=c++11; g++ sssp_software_msg.o ./USA/* sssp_cage -lpthread
 
 
 g++ -c bfs_seq.cpp -std=c++11
-g++ -c bfs_seq.cpp -std=c++11; g++ bfs_seq.o ./cage14/* -o bfs_seq_usa
+g++ -c bfs_seq.cpp -std=c++11; g++ bfs_seq.o ./cage14/* -o bfs_seq_usa -lpthread
 
 g++ -c bfs_software_msg.cpp -std=c++11 
-g++ -c bfs_software_msg.cpp -std=c++11; g++ bfs_software_msg.o ./cage14/* -o bfs_usa
+g++ -c bfs_software_msg.cpp -std=c++11; g++ bfs_software_msg.o ./cage14/* -o bfs_usa -lpthread
 
 g++ -c bfs_seq.cpp -std=c++11 
-g++ -c bfs_seq.cpp -std=c++11; g++ bfs_seq.o ./cage14/* -o bfs_seq_cage
+g++ -c bfs_seq.cpp -std=c++11; g++ bfs_seq.o ./cage14/* -o bfs_seq_cage -lpthread
 
 g++ -c bfs_software_msg.cpp -std=c++11
-g++ -c bfs_software_msg.cpp -std=c++11; g++ bfs_software_msg.o ./cage14/* bfs_cage
+g++ -c bfs_software_msg.cpp -std=c++11; g++ bfs_software_msg.o ./cage14/* bfs_cage -lpthread
 
 echo "Running"
 
