@@ -51,14 +51,6 @@ g++ -c bfs_software_msg.cpp -std=c++11; g++ bfs_software_msg.o ./cage14/* -o bfs
 
 echo "Running"
 
-echo "SSSP USA" >> results
-./sssp_seq_usa >> results
-echo "SSSP USA 64 9" >> results
-./sssp_usa 64 9 >> results
-echo "SSSP USA 64 8" >> results
-./sssp_usa 64 8 >> results
-echo "SSSP USA 64 7" >> results
-./sssp_usa 64 7 >> results
 
 
 echo "SSSP USA" >> results
@@ -70,14 +62,7 @@ echo "SSSP USA 40 8" >> results
 echo "SSSP USA 40 7" >> results
 ./sssp_usa 40 7 >> results
 
-echo "SSSP CAGE" >> results
-./sssp_seq_cage >> results
-echo "SSSP CAGE 64 9" >> results
-./sssp_cage 64 9 >> results
-echo "SSSP CAGE 64 8" >> results
-./sssp_cage 64 8 >> results
-echo "SSSP CAGE 64 7" >> results
-./sssp_cage 64 7 >> results
+
 
 echo "SSSP CAGE" >> results
 ./sssp_seq_cage >> results
@@ -89,14 +74,7 @@ echo "SSSP CAGE 40 7" >> results
 ./sssp_cage 40 7 >> results
 
 
-echo "BFS USA" >> results
-./bfs_seq_usa >> results
-echo "BFS USA 64 9" >> results
-./bfs_usa 64 9 >> results
-echo "BFS USA 64 8" >> results
-./bfs_usa 64 8 >> results
-echo "BFS USA 64 7" >> results
-./bfs_usa 64 7 >> results
+
 
 echo "BFS USA" >> results
 ./bfs_seq_usa >> results
@@ -107,14 +85,6 @@ echo "BFS USA 40 8" >> results
 echo "BFS USA 40 7" >> results
 ./bfs_usa 40 7 >> results
 
-echo "BFS CAGE" >> results
-./bfs_seq_cage >> results
-echo "BFS CAGE 64 9" >> results
-./bfs_cage 64 9 >> results
-echo "BFS CAGE 64 8" >> results
-./bfs_cage 64 8 >> results
-echo "BFS CAGE 64 7" >> results
-./bfs_cage 64 7 >> results
 
 
 echo "BFS CAGE" >> results
